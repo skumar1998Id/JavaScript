@@ -28,7 +28,7 @@
     The parentheses may include parameter names separated by commas:
     (parameter1, parameter2, ...)<br><br>
     The code to be executed, by the function, is placed inside curly brackets: {}</p>
-</div>
+</div><hr>
 <div>
   <h3>Objects</h3>
   <p>Objects are variables too. But objects can contain many values.</p>
@@ -41,7 +41,73 @@
   <h3>Array Methods</h3>
   <p>Array methods are : Array length ,Array toString(), Array pop(), Array push(), Array shift(), Array unshift(),Array join(),
     Array delete(), Array concat(), Array flat(), Array splice(), Array slice() </p>
-
+  <p>JavaScript Array length</p><p>The length property returns the length (size) of an array</p>
+  <p>The JavaScript method toString() converts an array to a string of (comma separated) array values.</p>
+  <p>The pop() method removes the last element from an array</p><p>The push() method adds a new element to an array (at the end)</p>
+  <p>The shift() method removes the first array element and "shifts" all other elements to a lower index.</p>
+  <p>The length property provides an easy way to append a new element to an array</p>
+  <p>The splice() method can be used to add new items to an array</p> <p>The slice() method slices out a piece of an array into a new array.</p>
+  <button type="button" onclick="getSizeOfArray()">Array Methods</button>
+</div>
+  <hr>
+<div>
+  <h3>Sorting Array</h3>
+  <p>The sort() method sorts an array alphabetically</p>
+  <p>The reverse() method reverses the elements in an array.You can use it to sort an array in descending order</p>
+  <p>By default, the sort() function sorts values as strings.
+    This works well for strings ("Apple" comes before "Banana")</p>
+    <p>However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+    Because of this, the sort() method will produce incorrect result when sorting numbers.</p>
+    <p>You can fix this by providing a compare function: <b>numericList.sort(function (a,b){return a-b})</b></p>
+  <p>The purpose of the compare function is to define an alternative sort order.
+    The compare function should return a negative, zero, or positive value, depending on the arguments</p>
+  <p>When the sort() function compares two values, it sends the values to the compare function, and sorts the values according to the returned (negative, zero, positive) value.</p>
+  <p>If the result is negative, a is sorted before b.</p>
+  <p>If the result is positive, b is sorted before a.</p>
+  <p>If the result is 0, no changes are done with the sort order of the two values.</p>
+  <button type="button" onclick="getSortArray()">Array Shorting</button>
+</div><hr>
+<div>
+  <h3>Array map</h3>
+  <p>The map() method creates a new array by performing a function on each array element.</p>
+  <p>The map() method does not execute the function for array elements without values.</p>
+  <p>The map() method does not change the original array.</p>
+  <p>The flatMap() method first maps all elements of an array and then creates a new array by flattening the array.</p>
+  <button type="button" onclick="mapFunction()">Mapping Array</button>
+</div>
+<hr>
+<div>
+  <h3>Array Const</h3>
+  <p>The keyword const is a little misleading. It does NOT define a constant array. It defines a constant reference to an array.</p>
+  <p>Because of this, we can still change the elements of a constant array.</p>
+  <script>
+    const list = ['Ram','Shyam']
+    list.push("Sita")
+    console.log('Updated list is: ',list)
+  </script>
+  <p>You can change the elements of a constant array.</p>
+  <p>For example: const list = ['Ram','Shyam'] </p>
+  <p>list.push("Sita")</p><p>Results: Ram,Shyam,Sita</p>
+</div>
+<hr>
+<div>
+  <h3>JavaScript For In For Object</h3>
+<p>The JavaScript for in statement loops through the properties of an Object</p>
+<p>for (key in object) {</p>
+ <p> // code block to be executed</p>
+ <p> }</p>
+  <button type="button" onclick="forInObj()">Click</button>
+  <h3>JavaScript For In For Array</h3>
+  <p>The JavaScript for in statement can also loop over the properties of an Array</p>
+  <p>for (variable in object) {</p>
+  <p> // code block to be executed</p>
+  <p> }</p>
+  <button type="button" onclick="forInArray()">Click</button>
+</div>
+<div>
+  <h3>Array.forEach()</h3>
+  <p>The forEach() method calls a function (a callback function) once for each array element.</p>
+  <button type="button" onclick="arrayForEach()">Click</button>
 </div>
 </body>
 </html>
